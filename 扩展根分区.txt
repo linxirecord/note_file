@@ -1,7 +1,0 @@
-fdisk /dev/sda
-partprobe
-pvcreate /dev/sda4
-vgextend rhel /dev/sda4
-vgs
-lvextend -L +5G /dev/mapper/rhel-root 
-xfs_growfs /dev/mapper/rhel-root 
